@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <div class="snowfall"></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pleasant</title>
+    <style>
+
+
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .message {
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+
+
+
+
+
+
+        .container {
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    /* Profil fotoğrafına gölge efekti ekleyerek parlamayı simüle etme */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Açık moda geçildiğinde beyaz bir gölge efekti */
+    transition: box-shadow 0.3s ease; /* Geçiş efekti */
+}
+
+
+        h1 {
+            color: #333;
+        }
+
+        .description {
+            margin-bottom: 20px;
+            color:  #c4b0b0;
+        }
+
+
+        .links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .links li {
+            margin-bottom: 15px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #353535;
+            font-weight: bold;
+            padding: 15px 20px;
+            border-radius: 30px;
+            background-color: #afafaf;
+            display: inline-block;
+            transition: transform 0.3s ease; /* transform özelliği için geçiş efekti */
+        }
+
+        .sd {
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .menu {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .close-btn:hover {
+            color: #ff0000; /* Çarpı simgesinin rengini değiştirme */
+        }
+        .links a:hover {
+            transform: scale(1.15); /* Maus üstüne gelindiğinde butonun boyutunu büyüt */
+        }
+        html,
+body {
+	margin: 0
+}
+
+#karAlani {
+	position: absolute;
+	width: 100%;
+	min-height: 100%;
+	background-color: #171723;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.fa-snowflake-o {
+	color: #fff;
+	position: absolute;
+	top: -20px;
+	animation: yagis linear forwards;
+}
+
+@keyframes yagis {
+	to {
+		transform: translateY(105vh);
+	}
+} 
+
+    </style>
+    <!-- Site faviconu -->
+        <link rel="icon" href="https://cdn.discordapp.com/attachments/1201125269466001498/1212386905434492939/asdasd.jpg?ex=65f1a64b&is=65df314b&hm=fd831766d6c2e57b67b30e1c29da936c867488427ee8967d91edf752f55da4cb&" type="image/ico">
+        <link rel="shortcut icon" href="" type="image/jpg">
+
+
+        
+
+
+        <head>
+            <link rel="stylesheet"
+                  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        </head>
+        <body>
+            <div id="karAlani"></div>
+        </body>
+
+
+
+
+
+
+
+
+        
+    
+    <body onkeydown="return false"></body>
+
+
+    
+    <div class="sd">
+        <img class="profile-image" id="profile-img" src="https://cdn.discordapp.com/attachments/1201125269466001498/1212386905434492939/asdasd.jpg?ex=65f1a64b&is=65df314b&hm=fd831766d6c2e57b67b30e1c29da936c867488427ee8967d91edf752f55da4cb&" alt="Profil Resminiz">
+
+        <h1>Pleasant</h1>
+        <p class="description">Merhaba! Ben Adım Bulut, bir frontend geliştiriciyim ve Discord'da bot kodluyorum.</p>
+
+        <ul class="links">
+            <li><a href="https://www.youtube.com/@adoniscode">Youtube</a></li>
+            <li><a href="https://www.discord.gg/Ywruzc9uVB">Discord</a></li>
+            <li><a href="https://www.discord.gg/AdonisDevelopment">Github</a></li>
+        </ul>
+        <span class="theme-mode"></span>
+    </div>
+    <head>
+        
+        <script>
+
+            function karTanesi() {
+	// <i> elemanı oluştur
+	var karTanesi = document.createElement('i');
+	// id den elementi çağırıp zemin değişkenine at
+	var zemin = document.getElementById("karAlani");
+	// tag adından body çağırıp body değişkenine at
+	var body = document.getElementsByTagName("BODY")[0];
+	// bodyYukseklik değişkenine body yüksekliğini ata
+	var bodyYukseklik = body.clientHeight;
+	// zemine atadığımız elementin yüksekliğini body ile aynı yap
+	zemin.style.height = bodyYukseklik + "px";
+	// FontAwesome ikonu görünmesi için gerekli class'ları ekle
+	karTanesi.classList.add('fa','fa-snowflake-o');
+	// Kar tanelerine 0' dan ekran genişliğine kadar rastgele sol boşluk ver
+	karTanesi.style.left = Math.random() * body.clientWidth + 'px';
+	// 0 ile 1 arasında rastgele opacity değeri oluştur bu sayede solgun kar taneleri oluşsun
+	karTanesi.style.opacity = Math.random();
+	// 2 ile 5 arasında rastgele animationDuration süresi oluştur
+	karTanesi.style.animationDuration = Math.random() * 3 + 2 + 's';
+	// zemin değişkeni içine oluşturulan i etiketini yerleştir
+	zemin.appendChild(karTanesi);
+	// Sürekli olarak bir element oluşturmak bir süre sonra tarayıcıyı yoracaktır
+	// bu yüzden oluşan kar tanesini 7 saniye sonra tamamen kaldır
+	setTimeout(() => { karTanesi.remove(); }, 7000);
+}
+// her 80ms geçtiğinde karTanesi oluşturan fonksiyonu çalıştır
+setInterval(karTanesi, 80); 
+       </script>
+
+        
+</body>
+</html>
