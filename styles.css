@@ -14,7 +14,7 @@ body {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    filter: brightness(90%) blur(3px); /* Blur efekti ekleyerek fotoğrafı daha belirgin hale getir */
+    filter: brightness(90%) blur(3px); /* Blur efekti ekleyerek fotoğrafı daha belirgin hale getir ammmmmmmmmman abi olmazsa olmaz bunu yapmak içni aq calabilirsiniz bu profil imageyi :D*/
 }
 
 header {
