@@ -54,9 +54,9 @@
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    /* Profil fotoğrafına gölge efekti ekleyerek parlamayı simüle etme */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Açık moda geçildiğinde beyaz bir gölge efekti */
-    transition: box-shadow 0.3s ease; /* Geçiş efekti */
+
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); 
+    transition: box-shadow 0.3s ease; 
 }
 
 
@@ -89,7 +89,7 @@
             border-radius: 30px;
             background-color: #afafaf;
             display: inline-block;
-            transition: transform 0.3s ease; /* transform özelliği için geçiş efekti */
+            transition: transform 0.3s ease; 
         }
 
         .sd {
@@ -116,10 +116,10 @@
         }
 
         .close-btn:hover {
-            color: #ff0000; /* Çarpı simgesinin rengini değiştirme */
+            color: #ff0000;
         }
         .links a:hover {
-            transform: scale(1.15); /* Maus üstüne gelindiğinde butonun boyutunu büyüt */
+            transform: scale(1.15);
         }
         html,
 body {
@@ -197,31 +197,28 @@ body {
         <script>
 
             function karTanesi() {
-	// <i> elemanı oluştur
+
 	var karTanesi = document.createElement('i');
-	// id den elementi çağırıp zemin değişkenine at
+
 	var zemin = document.getElementById("karAlani");
-	// tag adından body çağırıp body değişkenine at
+
 	var body = document.getElementsByTagName("BODY")[0];
-	// bodyYukseklik değişkenine body yüksekliğini ata
+
 	var bodyYukseklik = body.clientHeight;
-	// zemine atadığımız elementin yüksekliğini body ile aynı yap
+
 	zemin.style.height = bodyYukseklik + "px";
-	// FontAwesome ikonu görünmesi için gerekli class'ları ekle
 	karTanesi.classList.add('fa','fa-snowflake-o');
-	// Kar tanelerine 0' dan ekran genişliğine kadar rastgele sol boşluk ver
 	karTanesi.style.left = Math.random() * body.clientWidth + 'px';
-	// 0 ile 1 arasında rastgele opacity değeri oluştur bu sayede solgun kar taneleri oluşsun
+
 	karTanesi.style.opacity = Math.random();
-	// 2 ile 5 arasında rastgele animationDuration süresi oluştur
+
 	karTanesi.style.animationDuration = Math.random() * 3 + 2 + 's';
-	// zemin değişkeni içine oluşturulan i etiketini yerleştir
+
 	zemin.appendChild(karTanesi);
-	// Sürekli olarak bir element oluşturmak bir süre sonra tarayıcıyı yoracaktır
-	// bu yüzden oluşan kar tanesini 7 saniye sonra tamamen kaldır
+
 	setTimeout(() => { karTanesi.remove(); }, 7000);
 }
-// her 80ms geçtiğinde karTanesi oluşturan fonksiyonu çalıştır
+
 setInterval(karTanesi, 80); 
 
 		var isNS = (navigator.appName == "31pleasant") ? 1 : 0;
